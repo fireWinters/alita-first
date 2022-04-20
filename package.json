@@ -11,6 +11,10 @@
     "plugin": "alita plugin list",
     "start": "alita dev"
   },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verifyCommit.js"
+  },
   "lint-staged": {
     "**/*.less": "stylelint --syntax less",
     "**/*.css": "stylelint --syntax css",
